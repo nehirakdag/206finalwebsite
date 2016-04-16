@@ -1,0 +1,27 @@
+h1{
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 30px;
+	font-family: Tahoma,Geneva,sans-serif;
+	font-size: 100px;
+}
+	
+
+body{
+	background: white;
+	font-family: tahoma,Geneva,sans-serif;
+}
+
+a.landing{
+	color: #000000;
+	text-decoration:none;
+}
+
+a.dashboard{
+	color: #000000;
+	
+
+.background{
+	background: white;
+}

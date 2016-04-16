@@ -1,0 +1,8 @@
+#!/bin/sh
+
+rm -R ../profiles/
+ > users.txt
+ > friends.txt
+mkdir ../profiles/
+chmod 755 ../profiles/
+chgrp nogroup ../profiles/

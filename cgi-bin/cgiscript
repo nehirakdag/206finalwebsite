@@ -1,0 +1,57 @@
+#!/bin/sh
+
+if [ "$#" -ne 2 ]; then
+	echo "You need 2 arguments which are the group name and chmod number"
+	echo "Usage: ./cgiscript group_name chmod_value"
+	exit 1
+fi
+
+group=$1
+chVal=$2
+
+chgrp $group login.c
+chgrp $group login.h
+chgrp $group login.cgi
+chgrp $group register.c
+chgrp $group register.h
+chgrp $group register.cgi
+chmod $chVal login.c
+chmod $chVal login.h
+chmod $chVal login.cgi
+chmod $chVal register.c
+chmod $chVal register.h
+chmod $chVal register.cgi
+
+chgrp $group Makefile
+chmod $chVal Makefile
+
+chgrp $group users.txt
+chmod $chVal users.txt
+
+chgrp $group dashboard.py
+chmod $chVal dashboard.py
+
+chgrp $group makeafriend.py
+chmod $chVal makeafriend.py
+
+chgrp $group status.txt
+chmod $chVal status.txt
+
+chgrp $group friends.txt
+chmod $chVal friends.txt
+
+chgrp $group ../login.html
+chmod $chVal ../login.html
+
+chgrp $group ../template.html
+chmod $chVal ../template.html
+
+chgrp -R $group ../profiles
+chmod -R $chVal ../profiles
+
+chgrp $group status.py
+chmod $chVal status.py
+
+chgrp $group seefriends.cgi
+chmod $chVal seefriends.cgi
+

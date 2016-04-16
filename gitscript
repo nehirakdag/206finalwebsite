@@ -1,0 +1,24 @@
+#!/bin/sh
+
+if [ "$#" -gt 1 ]; then
+	echo "You just add 1 argument which is the commit message"
+	echo "Usage: gitscript commit_message"
+	exit 1
+fi
+
+if [ "$#" -eq 0 ]; then
+	echo "You just add 1 argument which is the commit message"
+	echo "Usage: gitscript commit_message"
+	exit 1
+fi
+
+commitmsg=$1
+
+git pull origin master
+git add --all
+git commit -m "$1"
+<<<<<<< HEAD
+git push origin master
+=======
+git push origin master
+>>>>>>> 8b32240dd5f6ab4e8e1de73f832c8983509eb416
